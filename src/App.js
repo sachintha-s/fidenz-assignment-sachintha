@@ -25,7 +25,6 @@ const fetchWithCashe = async () => {
 };
 
 const fetchData = async () => {
-  console.log("data fetchinggg....");
   let res = await axios.get(
     `https://api.openweathermap.org/data/2.5/group?id=${cityCodes.toString()}&units=metric&appid=8344082b8526b93cff0bd47e6255717c`
   );
@@ -46,7 +45,6 @@ function HomePage() {
     let cashedData = JSON.parse(localStorage.getItem("dataCash"));
     if (cashedData) {
       cashe = cashedData;
-      console.log(cashedData);
     }
     fetchWithCashe()
       .then((res) => {
@@ -62,7 +60,7 @@ function HomePage() {
       <LogoutButton/>
        <ul className="flex-container">
         {data.map((element) => (
-          <Card data={element} />
+          <Card key={element.id} data={element} />
         ))}
       </ul>
       </>
