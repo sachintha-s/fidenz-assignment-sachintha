@@ -2,37 +2,69 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+text-align: center;
+color: #FFFFFF;
+width: 260px;
+height: 280px;
+margin: 20px;
+background: #6073D7;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 35px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.name {
+  font-size: 36px;
+  font-weight: 600;
+  padding-top: .5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dis{
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 50px;
+}
+.temp{
+  font-weight: 600;
+  font-size: 36px;
+  padding-top: 25px;
+}
+.id{
+  padding-top: 30px;
+  font-weight: 400;
+  font-size: 20px;
+}
+.button {
+  border: none;
   color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  margin: 20px;
+  transition-duration: 0.4s;
+}
+.login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #35cd60;
+  font-weight: 500;
+}
+.login:hover {
+  background-color: #24ba33;
+}
+.logout{
+  background-color: #f44336;
+}
+.logout:hover {
+  background-color: #ba2e24;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
